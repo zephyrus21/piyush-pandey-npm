@@ -28,22 +28,11 @@ const questions = [{
             },
         },
         {
-            name: `Download my ${chalk.magentaBright.bold('Resume')}?`,
+            name: `Get my ${chalk.magentaBright.bold('Resume')}?`,
             value: () => {
-                // cliSpinners.dots;
-                const loader = ora({
-                    text: ' Downloading Resume',
-                    spinner: cliSpinners.material,
-                }).start();
-                let pipe = request('https://anmolsingh.me/api/resume').pipe(
-                    fs.createWriteStream('./anmol-resume.html')
+                open(
+                    'https://drive.google.com/file/d/1756ZIKX8yqX9dtrPiYeibltZb883jyu4/view?usp=sharing'
                 );
-                pipe.on('finish', function() {
-                    let downloadPath = path.join(process.cwd(), 'anmol-resume.html');
-                    console.log(`\nResume Downloaded at ${downloadPath} \n`);
-                    open(downloadPath);
-                    loader.stop();
-                });
             },
         },
         {
@@ -105,10 +94,5 @@ const me = boxen(
 );
 
 console.log(me);
-const tip = [
-    `Tip: Try ${chalk.cyanBright.bold('cmd/ctrl + click')} on the links above`,
-    '',
-].join('\n');
-console.log(tip);
 
 prompt(questions).then((answer) => answer.action());
