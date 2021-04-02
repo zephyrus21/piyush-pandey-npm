@@ -23,5 +23,15 @@
     "bugs": {
         "url": "https://github.com/zephyrus21/piyush-pandey-npm/issues"
     },
-    "homepage": "https://github.com/zephyrus21/piyush-pandey-npm#readme"
+    "homepage": "https://github.com/zephyrus21/piyush-pandey-npm#readme",
+    "dependencies": {
+        "boxen": "^5.0.0",
+        "chalk": "^4.1.0",
+        "clear": "^0.1.0",
+        "cli-spinners": "^2.6.0",
+        "inquirer": "^8.0.0",
+        "open": "^8.0.4",
+        "ora": "^5.4.0",
+        "request": "^2.88.2"
+    }
 }
