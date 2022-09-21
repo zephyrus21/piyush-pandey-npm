@@ -1,6 +1,6 @@
 {
   "name": "piyush-pandey",
-  "version": "7.0.0",
+  "version": "2.0.3",
   "description": "A social card of Piyush Pandey (@zephyrus21)",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "node index.js",
-    "pub": "npm version major & npm publish"
+    "pub": "npm publish"
   },
   "repository": {
     "type": "git",
